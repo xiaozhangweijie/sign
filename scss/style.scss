@@ -1,0 +1,92 @@
+@import "_minix.scss";
+@import "common.scss";
+.wrap {
+    width: 100%;
+    height: 100%;
+    @include box_flex;
+    @include direction(column);
+}
+
+header {
+    width: 100%;
+    height: pxTorem(44px);
+    font-size: pxTorem(14px);
+    line-height: pxTorem(44px);
+    @include box_flex;
+    @include justify(space-between);
+    background: green;
+    color: #fff;
+}
+
+section {
+    width: 100%;
+    height: 100%;
+    .title {
+        width: 100%;
+        height: pxTorem(100px);
+        >.swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .dls {
+        width: 100%;
+        @include box_flex;
+        @include flexWrap(wrap);
+        padding: pxTorem(5px) pxTorem(5px);
+        @include sizing;
+        dl {
+            width: 20%;
+            dt {
+                width: pxTorem(50px);
+                height: pxTorem(50px);
+                >img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            dd {
+                font-size: pxTorem(14px);
+            }
+        }
+    }
+    .bg {
+        width: 100%;
+        height: pxTorem(10px);
+        background: #eee;
+    }
+    .list {
+        width: 100%;
+        height: pxTorem(44px);
+        line-height: pxTorem(44px);
+        @include box_flex;
+        @include justify(space-between);
+        border-bottom: 1px solid #ccc;
+        padding: pxTorem(5px);
+        @include sizing;
+        li {
+            font-size: pxTorem(14px);
+        }
+    }
+    .main {
+        width: 100%;
+        @include box_flex;
+        @include flexWrap(wrap);
+        dl {
+            @include box_flex;
+            margin-top: pxTorem(5px);
+            dt {
+                width: pxTorem(100px);
+                height: pxTorem(100px);
+                >img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            dd {
+                font-size: pxTorem(14px);
+                margin-left: pxTorem(30px);
+            }
+        }
+    }
+}
